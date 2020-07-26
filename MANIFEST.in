@@ -1,0 +1,13 @@
+include README
+include magame/icons/brick.png
+include magame/icons/dot.png
+include magame/icons/meowky1.png
+include magame/icons/meowky2.png
+include magame/icons/mouse.png
+include magame/icons/pacman_down.png
+include magame/icons/pacman_left.png
+include magame/icons/pacman_right.png
+include magame/icons/pacman_up.png
+
+
+

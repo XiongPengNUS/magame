@@ -3,6 +3,7 @@ import sys
 from numpy import random
 import numpy as np
 from copy import deepcopy
+import os
 
 
 def play(maze, func):
@@ -18,6 +19,8 @@ def play(maze, func):
     maze[0][0] = -1
     dot_count = (np.array(maze) == 0).sum()
     
+    dirt = os.path.dirname(__file__)
+    
     pygame.display.init()
     pygame.font.init()
 
@@ -32,10 +35,9 @@ def play(maze, func):
     game_display.fill(black)
 
     clock = pygame.time.Clock()
-
-    brick = pygame.image.load('magame/brick.png')
+    brick = pygame.image.load(os.path.join(dirt, 'icons', 'brick.png'))
     brick = pygame.transform.scale(brick, (50, 50))
-    dot = pygame.image.load('magame/dot.png')
+    dot = pygame.image.load(os.path.join(dirt, 'icons', 'dot.png'))
     dot = pygame.transform.scale(dot, (50, 50))
     
     row = len(maze)
@@ -105,13 +107,13 @@ def play(maze, func):
             draw_maze(maze)
             
             if x_change == 0 and y_change == -1:
-                pac = pygame.image.load('magame/pacman_up.png')
+                pac = pygame.image.load(os.path.join(dirt, 'icons', 'pacman_up.png'))
             elif x_change == 0 and y_change == 1:
-                pac = pygame.image.load('magame/pacman_down.png')
+                pac = pygame.image.load(os.path.join(dirt, 'icons', 'pacman_down.png'))
             elif x_change == 1 and y_change == 0:
-                pac = pygame.image.load('magame/pacman_right.png')
+                pac = pygame.image.load(os.path.join(dirt, 'icons', 'pacman_right.png'))
             else:
-                pac = pygame.image.load('magame/pacman_left.png')
+                pac = pygame.image.load(os.path.join(dirt, 'icons', 'pacman_left.png'))
             pac = pygame.transform.scale(pac, (50, 50))
             
             draw_pac(position)

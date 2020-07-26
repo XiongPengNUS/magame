@@ -1,5 +1,6 @@
 import pygame
 import sys
+import os
 from numpy import random
 
 
@@ -15,7 +16,9 @@ def play(maze, func):
     
     pygame.display.init()
     pygame.font.init()
-
+    
+    dirt = os.path.dirname(__file__)
+    
     display_width = 750
     display_height = 750
 
@@ -28,11 +31,12 @@ def play(maze, func):
 
     clock = pygame.time.Clock()
 
-    mouse = pygame.image.load('magame/mouse.png')
+    mouse = pygame.image.load(os.path.join(dirt, 'icons', 'mouse.png'))
     mouse = pygame.transform.scale(mouse, (50, 50))
-    brick = pygame.image.load('magame/brick.png')
+    brick = pygame.image.load(os.path.join(dirt, 'icons', 'brick.png'))
     brick = pygame.transform.scale(brick, (50, 50))
-    cat_names = ['magame/meowky1.png', 'magame/meowky2.png']
+    cat_names = [os.path.join(dirt, 'icons', 'meowky1.png'), 
+                 os.path.join(dirt, 'icons', 'meowky2.png')]
     cat = pygame.image.load(cat_names[round(random.rand())])
     cat = pygame.transform.scale(cat, (50, 50))
     
