@@ -75,7 +75,7 @@ The outputs are:
 - <code>move</code> is a <code>tuple</code> with two integers: <code>v_move</code> and <code>h_move</code>. It is used to indicate how the character moves in the maze, as shown by the following picture.
 - <code>memory</code> is the updated memory, such as all previous steps or previous moves of the character in the maze.
 
-<img src="https://github.com/XiongPengNUS/test/blob/master/Screen%20Shot%202020-07-25%20at%2011.57.26%20PM.png?raw=true" width=650>
+![](pos_move.png)
 
 The function receives the maze information, the current position in the maze, and previous step, moves, or other forms of memory; then decide the next move and update the memory.
 
