@@ -61,7 +61,7 @@ def play(maze, func):
     
     def draw_mouse(position):            
         game_display.blit(mouse,
-                          (125 + position[0]*50, 125 + position[1]*50))
+                          (125 + position[1]*50, 125 + position[0]*50))
     
     run = True
     x_change, y_change = 0, 0
@@ -76,19 +76,19 @@ def play(maze, func):
                 run = False
         if not win:
             new_move, memory = func(maze, position, memory)
-            x_change, y_change = new_move
-            #x_change, y_change = func(maze, position, (x_change, y_change))
+            y_change, x_change = new_move
+            
             if abs(x_change) + abs(y_change) != 1 and \
                abs(x_change) + abs(y_change) != 0:
                 raise ValueError('Invalid move!')
         
-            x = min(position[0] + x_change, column - 1)
+            x = min(position[1] + x_change, column - 1)
             x = max(x, 0)
-            y = min(position[1] + y_change, row - 1)
+            y = min(position[0] + y_change, row - 1)
             y = max(y, 0)
             if x_change != 0 or y_change != 0:
                 if maze[y][x] == 0:
-                    position = x, y
+                    position = y, x
                 elif maze[y][x] == -1:
                     win = True
             

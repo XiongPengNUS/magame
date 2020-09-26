@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='magame',
-     version='0.0.3',
+     version='0.0.4',
      author="Peng Xiong",
      author_email="xiongpengnus@gmail.com",
      description="Write your own function to solve the maze!",
@@ -16,6 +16,4 @@ setuptools.setup(
          "Programming Language :: Python :: 3",
          "Operating System :: OS Independent",
      ],
-     include_package_data=True,
-     install_requires=['pygame']
- )
+)

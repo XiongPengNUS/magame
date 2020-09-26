@@ -71,11 +71,11 @@ def maze_move(maze, position, memory):
 
 The input arguments of the function are:
 - <code>maze</code> as a nested list representing the maze.
-- <code>position</code> is a <code>tuple</code> with two integers: <code>h_index</code> and <code>v_index</code>. The first integer <code>v_index</code> indicates the horizontal index, and the second integer <code>v_index</code> indicates the vertical index, as shown by the picture below.
+- <code>position</code> is a <code>tuple</code> with two integers: <code>v_index</code> and <code>h_index</code>. The first integer <code>v_index</code> indicates the vertical index, and the second integer <code>h_index</code> indicates the horizontal index, as shown by the picture below.
 - <code>memory</code> can be any data type. Users may use it to keep a track of all previous steps or previous moves. The initial value of memory is given as <code>None</code>.
 
 The outputs are:
-- <code>move</code> is a <code>tuple</code> with two integers: <code>h_move</code> and <code>v_move</code>. It is used to indicate how the character moves in the maze, as shown by the following picture.
+- <code>move</code> is a <code>tuple</code> with two integers: <code>v_move</code> and <code>h_move</code>. It is used to indicate how the character moves in the maze, as shown by the following picture.
 - <code>memory</code> is the updated memory, such as all previous steps or previous moves of the character in the maze.
 
 <img src="https://github.com/XiongPengNUS/test/blob/master/Screen%20Shot%202020-07-25%20at%2011.57.26%20PM.png?raw=true" width=650>
