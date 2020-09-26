@@ -19,11 +19,8 @@ Once you installed the package with the <code>pip</code> command, you may follow
 ```python
 from magame import mappy    # Import the Mappy game
 from magame import pacman   # Import the Pac-man game
-from magame import mazes    # Impor the pre-defined mazes
+from magame import mazes    # Import the pre-defined mazes
 ```
-
-    pygame 2.0.0.dev6 (SDL 2.0.10, python 3.7.4)
-    Hello from the pygame community. https://www.pygame.org/contribute.html
 
 
 The variable <code>mazes</code> is a tuple, containing four nested lists representing the mazes, where:
